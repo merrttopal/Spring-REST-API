@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "7ea4878c-e426-4419-a0b7-90f13279b849",
+		"name": "Java - React - RestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24069579"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "product/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"car223\",\r\n    \"detail\" : \"car2 123detail\",\r\n    \"price\":\"2000012300\",\r\n    \"status\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/product/save"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8090/product/save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"car2\",\r\n    \"detail\" : \"car2 detail\",\r\n    \"price\":\"2000000\",\r\n    \"status\" : true\r\n}      ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8090/product/save"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 18:09:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pid\": 7,\n    \"title\": \"car2\",\n    \"detail\": \"car2 detail\",\n    \"price\": 2000000,\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "product/update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pid\": 11,\r\n    \"title\" : \"car222\",\r\n    \"detail\" : \"car2 detail\",\r\n    \"price\":\"2000000\",\r\n    \"status\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/product/update"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8090/product/save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"car2\",\r\n    \"detail\" : \"car2 detail\",\r\n    \"price\":\"2000000\",\r\n    \"status\" : true\r\n}      ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8090/product/save"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 18:09:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pid\": 7,\n    \"title\": \"car2\",\n    \"detail\": \"car2 detail\",\n    \"price\": 2000000,\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "product/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "http://localhost:8090/product/list"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8090/product/list"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 18:44:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"pid\": 1,\n        \"title\": null,\n        \"detail\": null,\n        \"price\": null,\n        \"status\": null\n    },\n    {\n        \"pid\": 2,\n        \"title\": null,\n        \"detail\": null,\n        \"price\": null,\n        \"status\": null\n    },\n    {\n        \"pid\": 3,\n        \"title\": \"tv\",\n        \"detail\": \"tv desc\",\n        \"price\": 111111,\n        \"status\": true\n    },\n    {\n        \"pid\": 4,\n        \"title\": null,\n        \"detail\": null,\n        \"price\": null,\n        \"status\": null\n    },\n    {\n        \"pid\": 5,\n        \"title\": null,\n        \"detail\": null,\n        \"price\": null,\n        \"status\": null\n    },\n    {\n        \"pid\": 6,\n        \"title\": \"car\",\n        \"detail\": \"car detail\",\n        \"price\": 1000000,\n        \"status\": true\n    },\n    {\n        \"pid\": 7,\n        \"title\": \"car2\",\n        \"detail\": \"car2 detail\",\n        \"price\": 2000000,\n        \"status\": true\n    },\n    {\n        \"pid\": 8,\n        \"title\": null,\n        \"detail\": null,\n        \"price\": null,\n        \"status\": null\n    },\n    {\n        \"pid\": 9,\n        \"title\": null,\n        \"detail\": null,\n        \"price\": null,\n        \"status\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "product/delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8090/product/deleteProduct/9"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8090/product/deleteProduct/9"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 May 2023 21:27:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "true"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Mozart",
+			"item": [
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8090/news/service"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"mert@mail.com\",\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/admin/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Xml",
+			"item": [
+				{
+					"name": "read",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:8090/xml/read"
+					},
+					"response": []
+				},
+				{
+					"name": "PlantsList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/xml/plants"
+					},
+					"response": []
+				},
+				{
+					"name": "Cd Catolog",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/xml/cd"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
